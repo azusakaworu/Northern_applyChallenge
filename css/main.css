@@ -1,0 +1,37 @@
+/* 
+balck: #282828
+red: #D02035
+gray: #797979
+ */
+
+body{background-color: #282828; color: white;}
+
+div{margin: 0 auto;}
+
+hr{width: 100px;background-color:#D02035 }
+
+#submit{
+     background-color:#D02035;
+     color: white;
+     font-family:'Merriweather', serif;
+     font-size: 20px; 
+     font-weight: 700;
+}
+
+p{
+    font-family: 'Merriweather', serif;
+    font-size: 20px; 
+    font-weight: 400;
+}
+
+input{
+    font-family:'Merriweather', 
+    serif;font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 65px;
+}
