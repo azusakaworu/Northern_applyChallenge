@@ -24,15 +24,15 @@
         <form action="" method="post">
             <input type="email" name="email" id="email" placeholder="Your Email Address*">
 
-            <select name="choose" id="">
-                    <option value="">Your Interests</option>
-                    <option value="">Development</option>
-                    <option value="">Graphic design</option>
-                    <option value="">Project Management</option>
+            <select name="choose" id="" required>
+                    <option value="" disabled selected hidden>Your Interests</option>
+                    <option value="0">Development</option>
+                    <option value="1">Graphic design</option>
+                    <option value="2">Project Management</option>
              </select>
           
 
-            <button type="submit" id="submit"  @click.prevent="ajaxFun()">Sign Up Now</button>
+            <button type="submit" id="submit"  @click.prevent="ajaxFun">Sign Up Now</button>
 
 
         </form>
