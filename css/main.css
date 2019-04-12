@@ -4,98 +4,117 @@ red: #D02035
 gray: #797979
  */
 
-
-
 /* font-sizing color  */
-body{background-color: #282828; color: white;}
 
-
-h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 65px;
-    
-
+body {
+    background-color: #282828;
+    color: white;
 }
 
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 65px;
+}
 
-#formArea{
+#formArea {
     width: 49%;
     margin: 10em auto;
     position: relative;
 }
 
-hr{
+hr {
     display: block;
     width: 30%;
     height: 2%;
-    background-color:#D02035;
+    background-color: #D02035;
     position: absolute;
     float: left;
-    top: 5em;
+    top: 6em;
     border: none;
- 
 }
 
-
-p{
+p {
     font-family: 'Merriweather', serif;
-    font-size: 20px; 
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.5em;
     margin: 3em 0;
 }
 
-
 /* input select submit */
-input,select:invalid,select{
-    font-family:'Merriweather', serif;
+
+input, select:invalid, select {
+    font-family: 'Merriweather', serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
     padding: 1em 2em;
     background-color: gainsboro;
-    border:none;
-    
+    border: none;
 }
 
-
-
-input, select{
-    -ms-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box; 
-    box-sizing:border-box;
+.arrow-right {
+    display: inline-block;
+    text-align: left;
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.3em solid transparent;
+    border-left: 0.3em solid white;
 }
 
-input{width: 49%;margin-bottom:2em;margin-right: 1.5%; }
-select{width: 49%;margin-bottom:2em;
-
+input, select {
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-select:invalid{color: gray;}
+input {
+    width: 49%;
+    margin-bottom: 2em;
+    margin-right: 1.5%;
+}
 
-#submit{
-    background-color:#D02035;
+select {
+    width: 49%;
+    margin-bottom: 2em;
+    display: inline-block;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    background: url(https://image.flaticon.com/icons/svg/60/60995.svg) 92% / 3% no-repeat gainsboro;
+   
+}
+
+select:invalid {
+    color: gray;
+}
+
+#submit {
+    background-color: #D02035;
     color: white;
-    font-family:'Merriweather', serif;
-    font-size: 20px; 
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
     font-weight: 700;
     border: none;
     border-radius: 3px;
+    width: 100%;
+    height: 3em;
 }
 
-input:focus,select:focus,button:focus{
+input:focus, select:focus, button:focus {
     border-color: #d02035;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
     outline: 0 none;
 }
-button{width: 100%;height: 3em;}
+/* 
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 0.5em solid #f00;
+} */
 
-
-
-
-
-
-
-
-
+/* media  */
