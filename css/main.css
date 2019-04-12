@@ -47,7 +47,7 @@ p{
 
 
 /* input select submit */
-input,select:invalid{
+input,select:invalid,select{
     font-family:'Merriweather', serif;
     font-size: 16px;
     font-style: italic;
@@ -59,10 +59,12 @@ input,select:invalid{
 }
 
 
-input, select,option{
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+
+input, select{
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    box-sizing:border-box;
 }
 
 input{width: 49%;margin-bottom:2em;margin-right: 1.5%; }
