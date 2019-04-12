@@ -18,13 +18,13 @@
 
     <div id="formArea">
         <h2>INTERNSHIP SIGNUP FORM</h2>
-        <p>Prepare for your career with a Project Management, Web-Development, Graphic design, or Digital Marketing Internship at Northern.</p>
         <hr>
+        <p>Prepare for your career with a Project Management, Web-Development, Graphic design, or Digital Marketing Internship at Northern.</p>
+        
         <form action="" method="post">
             <input type="email" name="email" id="email" placeholder="Your Email Address*">
 
             <select name="choose" id="">
-                   
                     <option value="">Your Interests</option>
                     <option value="">Development</option>
                     <option value="">Graphic design</option>
@@ -32,7 +32,7 @@
              </select>
           
 
-            <button type="submit" id="submit"  @click="ajaxFun()">Sign Up Now</button>
+            <button type="submit" id="submit"  @click.prevent="ajaxFun()">Sign Up Now</button>
 
 
         </form>
