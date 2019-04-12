@@ -68,6 +68,10 @@ input, select {
     box-sizing: border-box;
 }
 
+option {
+    font-size: 16px;
+}
+
 input {
     width: 49%;
     margin-bottom: 2em;
@@ -84,7 +88,6 @@ select {
     /* Safari and Chrome */
     appearance: none;
     background: url(https://image.flaticon.com/icons/svg/60/60995.svg) 92% / 3% no-repeat gainsboro;
-   
 }
 
 select:invalid {
@@ -108,13 +111,59 @@ input:focus, select:focus, button:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
     outline: 0 none;
 }
-/* 
-.arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 0.5em solid transparent;
-    border-right: 0.5em solid transparent;
-    border-top: 0.5em solid #f00;
-} */
 
-/* media  */
+/* media queries */
+
+    /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1628px) {
+    
+    input,select{width: 100%}
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    input,select{width: 100%}
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    input,select{width: 100%}
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    input,select{width: 100%}
+   
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+   
+    input,select{width: 100%}
+  }
