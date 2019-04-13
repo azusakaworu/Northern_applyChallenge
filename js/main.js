@@ -2,23 +2,33 @@ let vm = new Vue({
 
     el: '#app',
     data: {
-        input: { email: "", choose: "" }
+        email:"",
+        errors:[],
+        choose:""
     },
 
 
     methods: {
-
-        thankMSG() {
-            alert("hahaha");
+        checkForm(e){
+            if(this.email) return true;
+            this.errors = [];
+             if(!this.email) this.errors.push("Please enter a valid email address.");
+     
+            e.preventDefault();
 
         },
 
+        // thankMSG() {
+        //     alert("hahaha");
+
+        // },
 
 
-        ajaxFun() {
+
+        ajaxFun(){
             console.log("trying to submit");
 
-            if (this.input.email != "" && this.input.choose != "") {
+             if (this.email != "" && this.choose != "") {
 
                 let url = `admin/form.php`;
                 fetch(url, { method: 'POST' })
@@ -26,7 +36,7 @@ let vm = new Vue({
                     .then(data => {
                         if (data == "worng") {
                             // if the php file returns a failure, try again
-                            console.log("authentication failed, try again");
+                            console.log(" error message ");
                             return;
                         } else {
                             // if the back-end authentication works, then go to the users page
@@ -39,7 +49,7 @@ let vm = new Vue({
                     });
 
 
-            }
+           }
         }
 
     }

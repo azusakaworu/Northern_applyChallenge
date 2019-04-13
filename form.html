@@ -23,10 +23,16 @@
             <p>Prepare for your career with a Project Management, Web-Development, Graphic design, or Digital Marketing
                 Internship at Northern.</p>
 
-            <form action="" method="post">
-                <input type="email" name="email" id="email" placeholder="Your Email Address*">
+            <form action="" method="post"  @submit="checkForm" >
+                    <p v-if="errors.length">
+                            <b></b>
+                            <ul>
+                              <li v-for="error in errors">{{ error }}</li>
+                            </ul>
+                          </p>
+                <input type="email" name="email" id="email" v-model="email" placeholder="Your Email Address*">
 
-                <select name="choose" id="" required>
+                <select name="choose" id="" required v-model="choose">
                     <option value="" disabled selected hidden>Your Interests</option>
                     <option value="0">Development</option>
                     <option value="1">Graphic design</option>
@@ -34,7 +40,7 @@
                 </select>
 
                 <!-- <div class="arrow-down"></div> -->
-                <button type="submit" id="submit" @click.prevent="ajaxFun">Sign Up Now &nbsp; <div class="arrow-right">
+                <button type="submit" id="submit" @click.prevent="ajaxFun()">Sign Up Now &nbsp; <div class="arrow-right">
                     </div></button>
 
 
