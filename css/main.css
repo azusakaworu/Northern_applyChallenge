@@ -15,6 +15,10 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 65px;
 }
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+}
 
 #formArea {
     width: 49%;
