@@ -3,44 +3,48 @@ let vm = new Vue({
     el: '#app',
     data: {
         email:"",
-        errors:[],
+        errors:"",
         choose:""
     },
 
 
     methods: {
-        checkForm(e){
-            if(this.email) return true;
-            this.errors = [];
-             if(!this.email) this.errors.push("Please enter a valid email address.");
-     
-            e.preventDefault();
+
+
+        thankMSG() {
+            alert("hahaha");
 
         },
 
-        // thankMSG() {
-        //     alert("hahaha");
+        validEmail(email){
+            var emailReg =/^\w{3,}@[A-z]{2,6}\.[A-z]{2,5}$/;
+            return emailReg.test(email);
+            
+        },
 
-        // },
+        checkForm(e){
+            e.preventDefault();
+           
 
-
-
-        ajaxFun(){
-            console.log("trying to submit");
-
+             console.log("trying to submit");
+           
              if (this.email != "" && this.choose != "") {
-
-                let url = `admin/form.php`;
+                 let url = `./form.json`;
                 fetch(url, { method: 'POST' })
                     .then(res => res.json())
                     .then(data => {
-                        if (data == "worng") {
+                        console.log(this.email);
+                        if (!this.validEmail(this.email)) {
                             // if the php file returns a failure, try again
-                            console.log(" error message ");
+                            // console.log("Please enter a valid email address. ");
+                            this.errors = "Please enter a valid email address."
+
                             return;
                         } else {
                             // if the back-end authentication works, then go to the users page
-                            thankMSG();
+                            // thankMSG();
+                            console.log("you did!! tank you!!");
+                            this.thankMSG();
 
                         }
 
@@ -50,7 +54,18 @@ let vm = new Vue({
 
 
            }
+     
+            
+
         }
+
+     
+
+
+
+        // ajaxFun(){
+           
+        // }
 
     }
 
