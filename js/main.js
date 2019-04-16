@@ -6,16 +6,32 @@ let vm = new Vue({
         errors: "",
         choose: "",
         formSection:true,
-        ThanksSection:false
+        ThanksSection:false,
+        buttonText:"Sign Up Now"
+        //loadingState:false
 
     },
 
 
     methods: {
+        // thankMSG() {
+        //     //alert("hahaha");
+        //     this.formSection=false,
+        //     this.ThanksSection=true
+        // },
+        
         thankMSG() {
             //alert("hahaha");
-            this.formSection=false,
-            this.ThanksSection=true
+            
+           setTimeout(() =>{ 
+                //this.buttonText = "Submitting...";
+                console.log("submitting...");
+                this.formSection=false;
+                this.ThanksSection=true;
+
+                 
+            }, 2000);
+           
         },
 
         validEmail(email) {
@@ -41,8 +57,8 @@ let vm = new Vue({
                         } else {
                             //works
                             console.log("you did!! tank you!!");
-                            //loading functio
-
+                            
+                        
                             //tankyou page
                             this.thankMSG();
 
