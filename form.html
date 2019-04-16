@@ -38,10 +38,19 @@
                     <option value="2">Project Management</option>
                 </select>
 
-                <!-- <div class="arrow-down"></div> -->
+                
                 <!--  @click.prevent="ajaxFun()" -->
-                <button type="submit" id="submit">{{buttonText}} &nbsp; <div class="arrow-right">
-                    </div></button>
+                <button type="submit" id="submit">
+                    <div v-if="SignUp">
+                        Sign Up Now &nbsp; <div class="arrow-right"></div> 
+                    </div>
+
+                    <div v-if="loading">
+                            Submitting... 
+                    </div>
+
+
+                    </button>
 
 
             </form></div>

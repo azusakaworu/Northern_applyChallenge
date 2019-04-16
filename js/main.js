@@ -5,33 +5,29 @@ let vm = new Vue({
         email: "",
         errors: "",
         choose: "",
-        formSection:true,
-        ThanksSection:false,
-        buttonText:"Sign Up Now"
-        //loadingState:false
+        formSection: true,
+        ThanksSection: false,
+        SignUp: true,
+        loading: false
+
+        //buttonText: "Submitting...",
+
 
     },
 
 
     methods: {
-        // thankMSG() {
-        //     //alert("hahaha");
-        //     this.formSection=false,
-        //     this.ThanksSection=true
-        // },
-        
         thankMSG() {
-            //alert("hahaha");
-            
-           setTimeout(() =>{ 
+
+            // https://stackoverflow.com/questions/38399050/vue-equivalent-of-settimeout
+            setTimeout(() => {
+
                 //this.buttonText = "Submitting...";
                 console.log("submitting...");
-                this.formSection=false;
-                this.ThanksSection=true;
-
-                 
+                this.formSection = false;
+                this.ThanksSection = true;
             }, 2000);
-           
+
         },
 
         validEmail(email) {
@@ -52,13 +48,13 @@ let vm = new Vue({
                         if (!this.validEmail(this.email)) {
                             // console.log("Please enter a valid email address. ");
                             this.errors = "Please enter a valid email address."
-
                             return;
                         } else {
                             //works
                             console.log("you did!! tank you!!");
                             
-                        
+                            this.SignUp=false;
+                            this.loading=true;
                             //tankyou page
                             this.thankMSG();
 
