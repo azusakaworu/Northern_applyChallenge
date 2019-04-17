@@ -8,11 +8,9 @@ let vm = new Vue({
         formSection: true,
         ThanksSection: false,
         SignUp: true,
-        loading: false
-
-
-
-    },
+        loading: false,
+        isActive:false
+},
 
 
     methods: {
@@ -46,7 +44,9 @@ let vm = new Vue({
                         console.log(this.email);
                         if (!this.validEmail(this.email)) {
                             // console.log("Please enter a valid email address. ");
+                            this.isActive = true;
                             this.errors = "Please enter a valid email address.";
+
 
                             return;
                         } else {

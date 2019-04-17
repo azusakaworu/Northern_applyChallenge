@@ -1,25 +1,35 @@
 /* 
+
 balck: #282828
 red: #D02035
 gray: #797979
+
  */
 
-/* select color  */
+/* select color official color #a20507 */
+
+
 ::selection {
     color:#fff;
-    background-color: #D02035 ;
+    background-color:#a20507 ;
 }
 
 ::-moz-selection {
     color:#fff;
-    background-color: #D02035 ;
+    background-color:#a20507 ;
 }
 
 ::-webkit-selection {
     color:#fff;
-    background-color: #D02035 ;
+    background-color:#a20507 ;
 }
 
+.active{
+    outline: 3px solid;
+    outline-color: red;
+    background-color:  gainsboro;
+
+}
 
 body {
     background-color: #282828;
@@ -29,10 +39,14 @@ body {
     border:0;
 }
 
+
+
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 65px;
 }
+
+
 h3{
     font-family: 'Montserrat', sans-serif;
     font-size: 35px;
@@ -46,13 +60,14 @@ h3{
     flex-direction: column;
 }
 
+
 hr {
     display:inline-block;
     width: 30%;
-    height: 50%;
     background-color: #D02035;
-    top: 4em;
+    top: 3em;
     border: none;
+    padding: 5px;
 }
 
 p {
@@ -103,6 +118,7 @@ input {
     width: 49%;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 0.2em;
 }
 
 #err span{
@@ -144,6 +160,9 @@ input:focus, select:focus, button:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
     outline: 0 none;
 }
+
+
+
 
 /* media queries */
 

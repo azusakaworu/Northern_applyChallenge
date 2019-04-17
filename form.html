@@ -35,7 +35,7 @@
                     <div id="err">
                         <span>{{errors}}</span>
                     </div>
-                    <input name="email" id="email" v-model="email" placeholder="Your Email Address*" class="errFocus">
+                    <input name="email" id="email" v-model="email" placeholder="Your Email Address*" class="errFocus" v-bind:class="{active: isActive}">
 
 
 
