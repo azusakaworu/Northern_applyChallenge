@@ -10,7 +10,6 @@ let vm = new Vue({
         SignUp: true,
         loading: false
 
-        //buttonText: "Submitting...",
 
 
     },
@@ -47,7 +46,8 @@ let vm = new Vue({
                         console.log(this.email);
                         if (!this.validEmail(this.email)) {
                             // console.log("Please enter a valid email address. ");
-                            this.errors = "Please enter a valid email address."
+                            this.errors = "Please enter a valid email address.";
+
                             return;
                         } else {
                             //works

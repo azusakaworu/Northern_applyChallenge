@@ -4,11 +4,29 @@ red: #D02035
 gray: #797979
  */
 
-/* font-sizing color  */
+/* select color  */
+::selection {
+    color:#fff;
+    background-color: #D02035 ;
+}
+
+::-moz-selection {
+    color:#fff;
+    background-color: #D02035 ;
+}
+
+::-webkit-selection {
+    color:#fff;
+    background-color: #D02035 ;
+}
+
 
 body {
     background-color: #282828;
     color: white;
+    margin:0;
+    padding:0;
+    border:0;
 }
 
 h2 {
@@ -21,19 +39,19 @@ h3{
 }
 
 #formArea {
-    width: 49%;
+    width: 70%;
     margin: 10em auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 hr {
-    display: block;
+    display:inline-block;
     width: 30%;
-    height: 2%;
+    height: 50%;
     background-color: #D02035;
-    position: absolute;
-    float: left;
-    top: 6em;
+    top: 4em;
     border: none;
 }
 
@@ -42,7 +60,7 @@ p {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5em;
-    margin: 3em 0;
+    margin: 2em 0;
 }
 
 /* input select submit */
@@ -81,6 +99,17 @@ input {
     margin-bottom: 2em;
     margin-right: 1.5%;
 }
+#err{
+    width: 49%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#err span{
+  font-size: 12px;
+  font-family: 'Merriweather', serif; 
+
+}
 
 select {
     width: 49%;
@@ -118,29 +147,12 @@ input:focus, select:focus, button:focus {
 
 /* media queries */
 
-@media (min-width: 1025px) and (max-width: 1840px) {
-    hr {
-        top: 10em
-    }
-    input, select {
-        width: 100%
-    }
+@media (max-width: 1125px) {
+  input,select{
+      width: 100%;
+  }
+  #err{
+    width: 100%;}
+
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    hr {
-        top: 13em
-    }
-    input, select {
-        width: 100%
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    hr {
-        top: 15em
-    }
-    input, select {
-        width: 100%
-    }
-}
