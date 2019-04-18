@@ -8,170 +8,168 @@ gray: #797979
 
 /* select color official color #a20507 */
 
-
 ::selection {
-    color:#fff;
-    background-color:#a20507 ;
+  color: #fff;
+  background-color: #a20507;
 }
 
 ::-moz-selection {
-    color:#fff;
-    background-color:#a20507 ;
+  color: #fff;
+  background-color: #a20507;
 }
 
 ::-webkit-selection {
-    color:#fff;
-    background-color:#a20507 ;
+  color: #fff;
+  background-color: #a20507;
 }
 
-.active{
-    outline: 3px solid;
-    outline-color: red;
-    background-color:  gainsboro;
-
+.active {
+  outline: 3px solid;
+  outline-color: red;
+  background-color: gainsboro;
 }
 
 body {
-    background-color: #282828;
-    color: white;
-    margin:0;
-    padding:0;
-    border:0;
+  background-color: #282828;
+  color: white;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-
-
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 65px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 65px;
 }
 
-
-h3{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
 }
 
 #formArea {
-    width: 70%;
-    margin: 10em auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  width: 70%;
+  margin: 10em auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-
 hr {
-    display:inline-block;
-    width: 30%;
-    background-color: #D02035;
-    top: 3em;
-    border: none;
-    padding: 5px;
+  display: inline-block;
+  width: 30%;
+  background-color: #d02035;
+  top: 3em;
+  border: none;
+  padding: 5px;
 }
 
 p {
-    font-family: 'Merriweather', serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.5em;
-    margin: 2em 0;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 2em 0;
 }
 
 /* input select submit */
 
-input, select:invalid, select {
-    font-family: 'Merriweather', serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
-    padding: 1em 2em;
-    background-color: gainsboro;
-    border: none;
+input,
+select:invalid,
+select {
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  padding: 1em 2em;
+  background-color: gainsboro;
+  border: none;
 }
 
 .arrow-right {
-    display: inline-block;
-    text-align: left;
-    border-top: 0.3em solid transparent;
-    border-bottom: 0.3em solid transparent;
-    border-left: 0.3em solid white;
+  display: inline-block;
+  text-align: left;
+  border-top: 0.3em solid transparent;
+  border-bottom: 0.3em solid transparent;
+  border-left: 0.3em solid white;
 }
 
-input, select {
-    -ms-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+input,
+select {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 option {
-    font-size: 16px;
+  font-size: 16px;
+}
+
+#err {
+  width: 49%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.2em;
+}
+
+#err span {
+  font-size: 12px;
+  font-family: "Merriweather", serif;
 }
 
 input {
-    width: 49%;
-    margin-bottom: 2em;
-    margin-right: 1.5%;
-}
-#err{
-    width: 49%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 0.2em;
-}
-
-#err span{
-  font-size: 12px;
-  font-family: 'Merriweather', serif; 
+  width: 49%;
+  margin-bottom: 2em;
+  margin-right: 1.5%;
+  background-color: gainsboro;
 
 }
 
 select {
-    width: 49%;
-    margin-bottom: 2em;
-    display: inline-block;
-    -moz-appearance: none;
-    /* Firefox */
-    -webkit-appearance: none;
-    /* Safari and Chrome */
-    appearance: none;
-    background: url(https://image.flaticon.com/icons/svg/60/60995.svg) 92% / 3% no-repeat gainsboro;
+  width: 49%;
+  margin-bottom: 2em;
+  /* display: inline-block; */
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background: url(https://image.flaticon.com/icons/svg/60/60995.svg) 92% / 3% no-repeat gainsboro;
 }
 
 select:invalid {
-    color: gray;
+  color: gray;
 }
 
 #submit {
-    background-color: #D02035;
-    color: white;
-    font-family: 'Merriweather', serif;
-    font-size: 20px;
-    font-weight: 700;
-    border: none;
-    border-radius: 3px;
-    width: 100%;
-    height: 3em;
+  background-color: #d02035;
+  color: white;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  height: 3em;
 }
 
-input:focus, select:focus, button:focus {
-    border-color: #d02035;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
-    outline: 0 none;
+input:focus,
+select:focus,
+button:focus {
+  border-color: #d02035;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
+  outline: 0 none;
 }
-
-
-
 
 /* media queries */
 
 @media (max-width: 1125px) {
-  input,select{
-      width: 100%;
+  input,
+  select {
+    width: 100%;
   }
-  #err{
-    width: 100%;}
-
+  #err {
+    width: 100%;
+  }
 }
-

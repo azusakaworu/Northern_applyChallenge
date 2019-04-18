@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400i%7CMontserrat:700" rel="stylesheet">
     <title>Northern_applyChallenge</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+    
 </head>
 
 <body>
@@ -35,10 +37,11 @@
                     <div id="err">
                         <span>{{errors}}</span>
                     </div>
-                    <input name="email" id="email" v-model="email" placeholder="Your Email Address*" class="errFocus" v-bind:class="{active: isActive}">
+                    <input name="email" id="email" v-model="email" placeholder="Your Email Address*" class="errFocus"
+                        v-bind:class="{active: isActive}">
 
 
-
+                    
                     <select name="choose" id="" required v-model="choose">
                         <option value="" disabled selected hidden>Your Interests</option>
                         <option value="0">Development</option>
