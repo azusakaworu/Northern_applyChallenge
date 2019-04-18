@@ -6,29 +6,6 @@ gray: #797979
 
  */
 
-/* select color official color #a20507 */
-
-::selection {
-  color: #fff;
-  background-color: #a20507;
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: #a20507;
-}
-
-::-webkit-selection {
-  color: #fff;
-  background-color: #a20507;
-}
-
-.active {
-  outline: 3px solid;
-  outline-color: red;
-  background-color: gainsboro;
-}
-
 body {
   background-color: #282828;
   color: white;
@@ -70,6 +47,34 @@ p {
   font-weight: 400;
   line-height: 1.5em;
   margin: 2em 0;
+}
+
+::selection {
+  color: #fff;
+  background-color: #a20507;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #a20507;
+}
+
+::-webkit-selection {
+  color: #fff;
+  background-color: #a20507;
+}
+
+.active {
+  outline: 3px solid;
+  outline-color: #d02035;
+  background-color: gainsboro;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px gainsboro inset !important;
 }
 
 /* input select submit */
@@ -122,18 +127,13 @@ input {
   width: 49%;
   margin-bottom: 2em;
   margin-right: 1.5%;
-  background-color: gainsboro;
-
 }
 
 select {
   width: 49%;
   margin-bottom: 2em;
-  /* display: inline-block; */
   -moz-appearance: none;
-  /* Firefox */
   -webkit-appearance: none;
-  /* Safari and Chrome */
   appearance: none;
   background: url(https://image.flaticon.com/icons/svg/60/60995.svg) 92% / 3% no-repeat gainsboro;
 }
@@ -164,7 +164,41 @@ button:focus {
 
 /* media queries */
 
-@media (max-width: 1125px) {
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  input,
+  select {
+    width: 100%;
+  }
+  #err {
+    width: 100%;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  input,
+  select {
+    width: 100%;
+  }
+  #err {
+    width: 100%;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  input,
+  select {
+    width: 100%;
+  }
+  #err {
+    width: 100%;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
   input,
   select {
     width: 100%;

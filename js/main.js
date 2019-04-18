@@ -34,25 +34,21 @@ let vm = new Vue({
             console.log("trying to submit");
 
             if (this.email != "" && this.choose != "") {
-                //let url = `./form.json`;
                 let url = `https://api.npoint.io/ccea0508a78ed7724e5d`;
                 fetch(url)
                     .then(res => res.json())
                     .then(data => {
                         console.log(this.email);
+                        console.log(JSON.stringify(this.choose));
                         if (!this.validEmail(this.email)) {
-                            // console.log("Please enter a valid email address. ");
                             this.isActive = true;
                             this.errors = "Please enter a valid email address.";
                             return;
                         } else {
-                            //works
-                            console.log("you did!! tank you!!");
-
                             this.SignUp = false;
                             this.loading = true;
-                            //tankyou page
                             this.thankMSG();
+                            return;
                         }
                     }).catch(function (error) {
                         console.error(error);
